@@ -1,0 +1,51 @@
+*** what is $guarded = ['id'] ->> is the inverse of the $fillable , guarded make any column within it not mass assignment
+ and other columns it willbe mass assignment,
+ you can put it into model such that `protected $guarded = ['id']`
+
+ *** standard Stub Model content that you need to follow when you start new project
+ <?php
+
+namespace {{ namespace }};
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class {{ class }} extends Model
+{
+    use HasFactory;
+
+    /**
+     * The table associated with the model.
+     *
+     * @var string
+     */
+    protected $table = '';
+
+    /**
+     * The attributes that are guarded from mass assignment.
+     *
+     * @var array
+     */
+    protected $guarded = ['id'];
+
+    ##-------------- Relationships
+
+    ##-------------- Custome Function
+
+    ##-------------- Attributes
+
+}
+
+
+
+
+*** another modification in stub request is make method authorized return true such that
+    /**
+     * Determine if the user is authorized to make this request.
+     */
+    public function authorize(): bool
+    {
+        return true;
+    }
+
+
