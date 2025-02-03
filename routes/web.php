@@ -21,13 +21,18 @@ Route::name('front.')->group(function(){
     Route::view('/service', 'front-theme.services')->name('service');
     Route::view('/contact', 'front-theme.contact')->name('contact');
 });
+
+// test theme
+Route::prefix('/dashboard')->name('dashboard.')->group(function(){
+    Route::view('/', 'dashboard-theme.index')->name('index');
+});
 // Route::get('/', function () {
 //     return view('front-theme.about');
 // });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
