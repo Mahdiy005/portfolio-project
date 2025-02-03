@@ -1,0 +1,20 @@
+*** How to handle RTL and LTR in multilanguage application ??
+    - first condition is that Theme must be support RTL and LTR
+    - the `css/files` is it controle the direction , so RTL theme assets is diffrence from LTR assets
+    - then open index file from two theme and then compare them to find where diffrence, the diffrence usually in head and the open
+        tag of the body such <body class="vartical right rtl">, the class rtl is used by css file to handle rtl ,such that
+        <body class="vertical ligh {{ Mcamara\LaravelLocalization\Facades\LaravelLocalization::getCurrentLocale()=='ar' ? 'rtl' : ''}}">
+
+    - so the different is in assets and different find in the previouse step
+    - then we will use the assets based on the current language such that
+        <link rel="stylesheet" href="{{ asset(is_rtl() ? 'dashboard_assets_rtl' :  'dashboard_assets') }}/css/feather.css">
+    is_rtl() is helper function with content such that
+    // check if we use rtl or ltr based on currenr lang
+        if (! function_exists('is_rtl')) {
+            function is_rtl()
+            {
+                return Mcamara\LaravelLocalization\Facades\LaravelLocalization::getCurrentLocale() == 'ar';
+            }
+        }
+
+// dashboard_assets_rtl

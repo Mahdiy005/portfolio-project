@@ -1,0 +1,14 @@
+*** if you have admin page for website , and you install laravel breeze, to make all routes take the prefix of `dashboared` and name
+Route::prefix('/dashboard')->name('dashboard.')->group(function () {
+    Route::middleware('auth')->group(function () {
+        Route::view('/', 'dashboard-theme.index')->name('index')->middleware('auth');
+    });
+    require __DIR__.'/auth.php';
+});
+* you can make nested group such the previouse exMPLE
+and don't forget  give the route that deliver you to dashboard or any other routes within that group
+must be take the `auth` middleware
+where the all routes within `require __DIR__.'/auth.php';` is already have its middleware
+* afetr group the file `auth.php` ithe prefix and name you must go to middleware `auth` to edit the route
+login with its new name
+

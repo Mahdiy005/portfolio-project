@@ -49,3 +49,11 @@ class {{ class }} extends Model
     }
 
 
+--------------------------------------------------------------------
+when you deel with seeder files it is prefere to deal with `updateOrCreate` rather than
+`create` specially when you have record in Database unique such as email
+
+User::updateOrCreate(['email' => '005@mail.com'], [
+    'name' => 'Ali',
+    'password' => bcrypt('1234567890'),
+])

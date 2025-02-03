@@ -4,7 +4,7 @@
 @include('dashboard-theme.partials.head')
 
 
-<body class="vertical  light  ">
+<body class="vertical ligh {{ is_rtl() ? 'rtl' : ''}}">
     <div class="wrapper">
         @include('dashboard-theme.partials.navbar')
         @include('dashboard-theme.partials.aside')

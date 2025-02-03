@@ -4,9 +4,9 @@
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-12">
-                <div class="row align-items-center mb-2">
+                <div class="mb-2 row align-items-center">
                     <div class="col">
-                        <h2 class="h5 page-title">Welcome!</h2>
+                        <h2 class="h5 page-title">{{ __('messages.welcom') }}!</h2>
                     </div>
                     <div class="col-auto">
                         <form class="form-inline">
@@ -19,50 +19,50 @@
                             <div class="form-group">
                                 <button type="button" class="btn btn-sm"><span
                                         class="fe fe-refresh-ccw fe-16 text-muted"></span></button>
-                                <button type="button" class="btn btn-sm mr-2"><span
+                                <button type="button" class="mr-2 btn btn-sm"><span
                                         class="fe fe-filter fe-16 text-muted"></span></button>
                             </div>
                         </form>
                     </div>
                 </div>
                 <div class="mb-2 align-items-center">
-                    <div class="card shadow mb-4">
+                    <div class="mb-4 shadow card">
                         <div class="card-body">
-                            <div class="row mt-1 align-items-center">
-                                <div class="col-12 col-lg-4 text-left pl-4">
+                            <div class="mt-1 row align-items-center">
+                                <div class="pl-4 text-left col-12 col-lg-4">
                                     <p class="mb-1 small text-muted">Balance</p>
                                     <span class="h3">$12,600</span>
                                     <span class="small text-muted">+20%</span>
                                     <span class="fe fe-arrow-up text-success fe-12"></span>
-                                    <p class="text-muted mt-2"> Etiam ultricies nisi vel augue. Curabitur
+                                    <p class="mt-2 text-muted"> Etiam ultricies nisi vel augue. Curabitur
                                         ullamcorper ultricies nisi. Nam eget dui </p>
                                 </div>
-                                <div class="col-6 col-lg-2 text-center py-4">
+                                <div class="py-4 text-center col-6 col-lg-2">
                                     <p class="mb-1 small text-muted">Today</p>
                                     <span class="h3">$2600</span><br />
                                     <span class="small text-muted">+20%</span>
                                     <span class="fe fe-arrow-up text-success fe-12"></span>
                                 </div>
-                                <div class="col-6 col-lg-2 text-center py-4 mb-2">
+                                <div class="py-4 mb-2 text-center col-6 col-lg-2">
                                     <p class="mb-1 small text-muted">Goal Value</p>
                                     <span class="h3">$260</span><br />
                                     <span class="small text-muted">+6%</span>
                                     <span class="fe fe-arrow-up text-success fe-12"></span>
                                 </div>
-                                <div class="col-6 col-lg-2 text-center py-4">
+                                <div class="py-4 text-center col-6 col-lg-2">
                                     <p class="mb-1 small text-muted">Completions</p>
                                     <span class="h3">26</span><br />
                                     <span class="small text-muted">+20%</span>
                                     <span class="fe fe-arrow-up text-success fe-12"></span>
                                 </div>
-                                <div class="col-6 col-lg-2 text-center py-4">
+                                <div class="py-4 text-center col-6 col-lg-2">
                                     <p class="mb-1 small text-muted">Conversion</p>
                                     <span class="h3">6%</span><br />
                                     <span class="small text-muted">-2%</span>
                                     <span class="fe fe-arrow-down text-danger fe-12"></span>
                                 </div>
                             </div>
-                            <div class="chartbox mr-4">
+                            <div class="mr-4 chartbox">
                                 <div id="areaChart"></div>
                             </div>
                         </div> <!-- .card-body -->
@@ -70,66 +70,66 @@
                 </div>
                 <div class="row items-align-baseline">
                     <div class="col-md-12 col-lg-4">
-                        <div class="card shadow eq-card mb-4">
+                        <div class="mb-4 shadow card eq-card">
                             <div class="card-body mb-n3">
                                 <div class="row items-align-baseline h-100">
-                                    <div class="col-md-6 my-3">
+                                    <div class="my-3 col-md-6">
                                         <p class="mb-0"><strong class="mb-0 text-uppercase text-muted">Earning</strong>
                                         </p>
                                         <h3>$2,562</h3>
                                         <p class="text-muted">Lorem ipsum dolor sit amet, consectetur
                                             adipiscing elit.</p>
                                     </div>
-                                    <div class="col-md-6 my-4 text-center">
+                                    <div class="my-4 text-center col-md-6">
                                         <div lass="chart-box mx-4">
                                             <div id="radialbarWidget"></div>
                                         </div>
                                     </div>
-                                    <div class="col-md-6 border-top py-3">
+                                    <div class="py-3 col-md-6 border-top">
                                         <p class="mb-1"><strong class="text-muted">Cost</strong></p>
                                         <h4 class="mb-0">108</h4>
-                                        <p class="small text-muted mb-0"><span>37.7% Last week</span></p>
+                                        <p class="mb-0 small text-muted"><span>37.7% Last week</span></p>
                                     </div> <!-- .col -->
-                                    <div class="col-md-6 border-top py-3">
+                                    <div class="py-3 col-md-6 border-top">
                                         <p class="mb-1"><strong class="text-muted">Revenue</strong></p>
                                         <h4 class="mb-0">1168</h4>
-                                        <p class="small text-muted mb-0"><span>-18.9% Last week</span></p>
+                                        <p class="mb-0 small text-muted"><span>-18.9% Last week</span></p>
                                     </div> <!-- .col -->
                                 </div>
                             </div> <!-- .card-body -->
                         </div> <!-- .card -->
                     </div> <!-- .col -->
                     <div class="col-md-12 col-lg-4">
-                        <div class="card shadow eq-card mb-4">
+                        <div class="mb-4 shadow card eq-card">
                             <div class="card-body">
-                                <div class="chart-widget mb-2">
+                                <div class="mb-2 chart-widget">
                                     <div id="radialbar"></div>
                                 </div>
                                 <div class="row items-align-center">
-                                    <div class="col-4 text-center">
-                                        <p class="text-muted mb-1">Cost</p>
+                                    <div class="text-center col-4">
+                                        <p class="mb-1 text-muted">Cost</p>
                                         <h6 class="mb-1">$1,823</h6>
-                                        <p class="text-muted mb-0">+12%</p>
+                                        <p class="mb-0 text-muted">+12%</p>
                                     </div>
-                                    <div class="col-4 text-center">
-                                        <p class="text-muted mb-1">Revenue</p>
+                                    <div class="text-center col-4">
+                                        <p class="mb-1 text-muted">Revenue</p>
                                         <h6 class="mb-1">$6,830</h6>
-                                        <p class="text-muted mb-0">+8%</p>
+                                        <p class="mb-0 text-muted">+8%</p>
                                     </div>
-                                    <div class="col-4 text-center">
-                                        <p class="text-muted mb-1">Earning</p>
+                                    <div class="text-center col-4">
+                                        <p class="mb-1 text-muted">Earning</p>
                                         <h6 class="mb-1">$4,830</h6>
-                                        <p class="text-muted mb-0">+8%</p>
+                                        <p class="mb-0 text-muted">+8%</p>
                                     </div>
                                 </div>
                             </div> <!-- .card-body -->
                         </div> <!-- .card -->
                     </div> <!-- .col -->
                     <div class="col-md-12 col-lg-4">
-                        <div class="card shadow eq-card mb-4">
+                        <div class="mb-4 shadow card eq-card">
                             <div class="card-body">
-                                <div class="d-flex mt-3 mb-4">
-                                    <div class="flex-fill pt-2">
+                                <div class="mt-3 mb-4 d-flex">
+                                    <div class="pt-2 flex-fill">
                                         <p class="mb-0 text-muted">Total</p>
                                         <h4 class="mb-0">108</h4>
                                         <span class="small text-muted">+37.7%</span>
@@ -139,12 +139,12 @@
                                     </div>
                                 </div> <!-- .d-flex -->
                                 <div class="row border-top">
-                                    <div class="col-md-6 pt-4">
+                                    <div class="pt-4 col-md-6">
                                         <h6 class="mb-0">108 <span class="small text-muted">+37.7%</span>
                                         </h6>
                                         <p class="mb-0 text-muted">Cost</p>
                                     </div>
-                                    <div class="col-md-6 pt-4">
+                                    <div class="pt-4 col-md-6">
                                         <h6 class="mb-0">1168 <span class="small text-muted">-18.9%</span>
                                         </h6>
                                         <p class="mb-0 text-muted">Revenue</p>
@@ -156,19 +156,19 @@
                 </div> <!-- .row -->
                 <div class="row">
                     <!-- Recent Activity -->
-                    <div class="col-md-12 col-lg-4 mb-4">
-                        <div class="card timeline shadow">
+                    <div class="mb-4 col-md-12 col-lg-4">
+                        <div class="shadow card timeline">
                             <div class="card-header">
                                 <strong class="card-title">Recent Activity</strong>
                                 <a class="float-right small text-muted" href="#!">View all</a>
                             </div>
                             <div class="card-body" data-simplebar
                                 style="height:355px; overflow-y: auto; overflow-x: hidden;">
-                                <h6 class="text-uppercase text-muted mb-4">Today</h6>
+                                <h6 class="mb-4 text-uppercase text-muted">Today</h6>
                                 <div class="pb-3 timeline-item item-primary">
                                     <div class="pl-5">
                                         <div class="mb-1"><strong>@Brown Asher</strong><span
-                                                class="text-muted small mx-2">Just create new layout Index,
+                                                class="mx-2 text-muted small">Just create new layout Index,
                                                 form, table</span><strong>Tiny Admin</strong></div>
                                         <p class="small text-muted">Creative Design <span class="badge badge-light">1h
                                                 ago</span>
@@ -178,21 +178,21 @@
                                 <div class="pb-3 timeline-item item-warning">
                                     <div class="pl-5">
                                         <div class="mb-3"><strong>@Hester Nissim</strong><span
-                                                class="text-muted small mx-2">has upload new files
+                                                class="mx-2 text-muted small">has upload new files
                                                 to</span><strong>Tiny Admin</strong></div>
-                                        <div class="row mb-3">
+                                        <div class="mb-3 row">
                                             <div class="col"><img
                                                     src="{{ asset('dashboard_assets') }}/assets/products/p1.jpg"
-                                                    alt="..." class="img-fluid rounded"></div>
+                                                    alt="..." class="rounded img-fluid"></div>
                                             <div class="col"><img
                                                     src="{{ asset('dashboard_assets') }}/assets/products/p2.jpg"
-                                                    alt="..." class="img-fluid rounded"></div>
+                                                    alt="..." class="rounded img-fluid"></div>
                                             <div class="col"><img
                                                     src="{{ asset('dashboard_assets') }}/assets/products/p3.jpg"
-                                                    alt="..." class="img-fluid rounded"></div>
+                                                    alt="..." class="rounded img-fluid"></div>
                                             <div class="col"><img
                                                     src="{{ asset('dashboard_assets') }}/assets/products/p4.jpg"
-                                                    alt="..." class="img-fluid rounded"></div>
+                                                    alt="..." class="rounded img-fluid"></div>
                                         </div>
                                         <p class="small text-muted">Front-End Development <span
                                                 class="badge badge-light">1h ago</span>
@@ -202,10 +202,10 @@
                                 <div class="pb-3 timeline-item item-success">
                                     <div class="pl-5">
                                         <div class="mb-3"><strong>@Kelley Sonya</strong><span
-                                                class="text-muted small mx-2">has commented
+                                                class="mx-2 text-muted small">has commented
                                                 on</span><strong>Advanced table</strong></div>
-                                        <div class="card d-inline-flex mb-2">
-                                            <div class="card-body bg-light py-2 px-3 small rounded"> Lorem
+                                        <div class="mb-2 card d-inline-flex">
+                                            <div class="px-3 py-2 rounded card-body bg-light small"> Lorem
                                                 ipsum dolor sit amet, consectetur adipiscing elit. Integer
                                                 dignissim nulla eu quam cursus placerat. Vivamus non odio
                                                 ullamcorper, lacinia ante nec, blandit leo. </div>
@@ -215,13 +215,13 @@
                                         </p>
                                     </div>
                                 </div>
-                                <h6 class="text-uppercase text-muted mb-4">Yesterday</h6>
+                                <h6 class="mb-4 text-uppercase text-muted">Yesterday</h6>
                                 <div class="pb-3 timeline-item item-warning">
                                     <div class="pl-5">
                                         <div class="mb-3"><strong>@Fletcher Everett</strong><span
-                                                class="text-muted small mx-2">created new group
+                                                class="mx-2 text-muted small">created new group
                                                 for</span><strong>Tiny Admin</strong></div>
-                                        <ul class="avatars-list mb-3">
+                                        <ul class="mb-3 avatars-list">
                                             <li>
                                                 <a href="#!" class="avatar avatar-sm">
                                                     <img alt="..." class="avatar-img rounded-circle"
@@ -249,10 +249,10 @@
                                 <div class="pb-3 timeline-item item-success">
                                     <div class="pl-5">
                                         <div class="mb-3"><strong>@Bertha Ball</strong><span
-                                                class="text-muted small mx-2">has commented
+                                                class="mx-2 text-muted small">has commented
                                                 on</span><strong>Advanced table</strong></div>
-                                        <div class="card d-inline-flex mb-2">
-                                            <div class="card-body bg-light py-2 px-3"> Lorem ipsum dolor sit
+                                        <div class="mb-2 card d-inline-flex">
+                                            <div class="px-3 py-2 card-body bg-light"> Lorem ipsum dolor sit
                                                 amet, consectetur adipiscing elit. Integer dignissim nulla eu
                                                 quam cursus placerat. Vivamus non odio ullamcorper, lacinia ante
                                                 nec, blandit leo. </div>
@@ -265,18 +265,18 @@
                                 <div class="pb-3 timeline-item item-danger">
                                     <div class="pl-5">
                                         <div class="mb-3"><strong>@Lillith Joseph</strong><span
-                                                class="text-muted small mx-2">has upload new files
+                                                class="mx-2 text-muted small">has upload new files
                                                 to</span><strong>Tiny Admin</strong></div>
-                                        <div class="row mb-3">
+                                        <div class="mb-3 row">
                                             <div class="col"><img
                                                     src="{{ asset('dashboard_assets') }}/assets/products/p4.jpg"
-                                                    alt="..." class="img-fluid rounded"></div>
+                                                    alt="..." class="rounded img-fluid"></div>
                                             <div class="col"><img
                                                     src="{{ asset('dashboard_assets') }}/assets/products/p1.jpg"
-                                                    alt="..." class="img-fluid rounded"></div>
+                                                    alt="..." class="rounded img-fluid"></div>
                                             <div class="col"><img
                                                     src="{{ asset('dashboard_assets') }}/assets/products/p2.jpg"
-                                                    alt="..." class="img-fluid rounded"></div>
+                                                    alt="..." class="rounded img-fluid"></div>
                                         </div>
                                         <p class="small text-muted">Front-End Development <span
                                                 class="badge badge-light">1h ago</span>
@@ -288,7 +288,7 @@
                     </div> <!-- / .col-md-6 -->
                     <!-- Striped rows -->
                     <div class="col-md-12 col-lg-8">
-                        <div class="card shadow">
+                        <div class="shadow card">
                             <div class="card-header">
                                 <strong class="card-title">Recent Data</strong>
                                 <a class="float-right small text-muted" href="#!">View all</a>
@@ -315,7 +315,7 @@
                                                     <button class="btn btn-sm dropdown-toggle more-vertical"
                                                         type="button" id="dr1" data-toggle="dropdown"
                                                         aria-haspopup="true" aria-expanded="false">
-                                                        <span class="text-muted sr-only">Action</span>
+                                                        <span class="sr-only text-muted">Action</span>
                                                     </button>
                                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dr1">
                                                         <a class="dropdown-item" href="#">Edit</a>
@@ -335,7 +335,7 @@
                                                     <button class="btn btn-sm dropdown-toggle more-vertical"
                                                         type="button" id="dr2" data-toggle="dropdown"
                                                         aria-haspopup="true" aria-expanded="false">
-                                                        <span class="text-muted sr-only">Action</span>
+                                                        <span class="sr-only text-muted">Action</span>
                                                     </button>
                                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dr2">
                                                         <a class="dropdown-item" href="#">Edit</a>
@@ -355,7 +355,7 @@
                                                     <button class="btn btn-sm dropdown-toggle more-vertical"
                                                         type="button" data-toggle="dropdown" aria-haspopup="true"
                                                         aria-expanded="false">
-                                                        <span class="text-muted sr-only">Action</span>
+                                                        <span class="sr-only text-muted">Action</span>
                                                     </button>
                                                     <div class="dropdown-menu dropdown-menu-right">
                                                         <a class="dropdown-item" href="#">Edit</a>
@@ -375,7 +375,7 @@
                                                     <button class="btn btn-sm dropdown-toggle more-vertical"
                                                         type="button" id="dr4" data-toggle="dropdown"
                                                         aria-haspopup="true" aria-expanded="false">
-                                                        <span class="text-muted sr-only">Action</span>
+                                                        <span class="sr-only text-muted">Action</span>
                                                     </button>
                                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dr4">
                                                         <a class="dropdown-item" href="#">Edit</a>
@@ -395,7 +395,7 @@
                                                     <button class="btn btn-sm dropdown-toggle more-vertical"
                                                         type="button" id="dr5" data-toggle="dropdown"
                                                         aria-haspopup="true" aria-expanded="false">
-                                                        <span class="text-muted sr-only">Action</span>
+                                                        <span class="sr-only text-muted">Action</span>
                                                     </button>
                                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dr5">
                                                         <a class="dropdown-item" href="#">Edit</a>
@@ -426,7 +426,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="list-group list-group-flush my-n3">
-                        <div class="list-group-item bg-transparent">
+                        <div class="bg-transparent list-group-item">
                             <div class="row align-items-center">
                                 <div class="col-auto">
                                     <span class="fe fe-box fe-24"></span>
@@ -438,7 +438,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="list-group-item bg-transparent">
+                        <div class="bg-transparent list-group-item">
                             <div class="row align-items-center">
                                 <div class="col-auto">
                                     <span class="fe fe-download fe-24"></span>
@@ -451,7 +451,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="list-group-item bg-transparent">
+                        <div class="bg-transparent list-group-item">
                             <div class="row align-items-center">
                                 <div class="col-auto">
                                     <span class="fe fe-inbox fe-24"></span>
@@ -464,7 +464,7 @@
                                 </div>
                             </div> <!-- / .row -->
                         </div>
-                        <div class="list-group-item bg-transparent">
+                        <div class="bg-transparent list-group-item">
                             <div class="row align-items-center">
                                 <div class="col-auto">
                                     <span class="fe fe-link fe-24"></span>
@@ -496,45 +496,45 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body px-5">
+                <div class="px-5 modal-body">
                     <div class="row align-items-center">
-                        <div class="col-6 text-center">
+                        <div class="text-center col-6">
                             <div class="squircle bg-success justify-content-center">
-                                <i class="fe fe-cpu fe-32 align-self-center text-white"></i>
+                                <i class="text-white fe fe-cpu fe-32 align-self-center"></i>
                             </div>
                             <p>Control area</p>
                         </div>
-                        <div class="col-6 text-center">
+                        <div class="text-center col-6">
                             <div class="squircle bg-primary justify-content-center">
-                                <i class="fe fe-activity fe-32 align-self-center text-white"></i>
+                                <i class="text-white fe fe-activity fe-32 align-self-center"></i>
                             </div>
                             <p>Activity</p>
                         </div>
                     </div>
                     <div class="row align-items-center">
-                        <div class="col-6 text-center">
+                        <div class="text-center col-6">
                             <div class="squircle bg-primary justify-content-center">
-                                <i class="fe fe-droplet fe-32 align-self-center text-white"></i>
+                                <i class="text-white fe fe-droplet fe-32 align-self-center"></i>
                             </div>
                             <p>Droplet</p>
                         </div>
-                        <div class="col-6 text-center">
+                        <div class="text-center col-6">
                             <div class="squircle bg-primary justify-content-center">
-                                <i class="fe fe-upload-cloud fe-32 align-self-center text-white"></i>
+                                <i class="text-white fe fe-upload-cloud fe-32 align-self-center"></i>
                             </div>
                             <p>Upload</p>
                         </div>
                     </div>
                     <div class="row align-items-center">
-                        <div class="col-6 text-center">
+                        <div class="text-center col-6">
                             <div class="squircle bg-primary justify-content-center">
-                                <i class="fe fe-users fe-32 align-self-center text-white"></i>
+                                <i class="text-white fe fe-users fe-32 align-self-center"></i>
                             </div>
                             <p>Users</p>
                         </div>
-                        <div class="col-6 text-center">
+                        <div class="text-center col-6">
                             <div class="squircle bg-primary justify-content-center">
-                                <i class="fe fe-settings fe-32 align-self-center text-white"></i>
+                                <i class="text-white fe fe-settings fe-32 align-self-center"></i>
                             </div>
                             <p>Settings</p>
                         </div>
