@@ -4,15 +4,15 @@
     <div class="container mt-4 rtl-support">
         <div class="d-flex justify-content-between align-items-center mb-3">
             <h2>{{ __('messages.add-new') }}</h2>
-            <a href="{{ route('dashboard.services.index') }}"
-                class="btn btn-secondary">{{ __('messages.back-to-services') }}</a>
+            <a href="{{ route('dashboard.features.index') }}"
+                class="btn btn-secondary">{{ __('messages.back-to-features') }}</a>
         </div>
         <x-status />
 
         <div class="card">
-            <div class="card-header">{{ __('messages.service-deatils') }}</div>
+            <div class="card-header">{{ __('messages.feature-deatils') }}</div>
             <div class="card-body">
-                <form action="{{ route('dashboard.services.store') }}" method="POST">
+                <form action="{{ route('dashboard.features.store') }}" method="POST">
                     @csrf
                     <div class="form-group">
                         <x-label-form for="title">{{ __('messages.title') }}</x-label-form>

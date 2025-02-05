@@ -15,7 +15,7 @@ return [
     'services' => 'Services',
     'all-services' => 'All Services',
     'components' => 'Components',
-    'add-new-service' => 'Add New Service',
+    'add-new' => 'Create',
     'update-service' => 'Update Service',
     'no-services-available' => 'No services available',
     'title' => 'Title',
@@ -27,9 +27,16 @@ return [
     'delete' => 'Delete',
     'back-to-services' => 'Back to Services',
     'service-deatils' => 'Service Details',
-    'save-service' => 'Save Service',
+    'save' => 'Save',
     'update-status' => 'Updated Succefully',
     'delete-status' => 'Deleted Succefully',
     'add-status' => 'Created Succefully',
     'are-sure' => 'Are You Sure',
+
+    // feature module
+    'features' => 'Features',
+    'no-features-available' => 'No features available',
+    'back-to-features' => 'Back to Features',
+    'feature-deatils' => 'Feature Details',
+
 ];

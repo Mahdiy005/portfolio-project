@@ -17,7 +17,7 @@ class ActionButton extends Component
     {
         if($type == 'create') {
             $this->color = 'primary';
-            $this->text = __('messages.add-new-service');
+            $this->text = __('messages.add-new');
         } elseif($type == 'show') {
             $this->color = 'info';
             $this->text = __('messages.show');
