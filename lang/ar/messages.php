@@ -15,7 +15,7 @@ return [
     'all-services' => 'عرض كل الخدمات',
     'services' => 'الخدمات',
     'components' => 'المكونات',
-    'add-new-service' => 'اضافه خدمه جديده',
+    'add-new' => 'اضافه',
     'no-services-available' => 'لا يوجد خدمات متوفره حتي الان',
     'title' => 'العنوان',
     'description' => 'الوصف',
@@ -26,10 +26,17 @@ return [
     'delete' => 'حذف',
     'back-to-services' => 'الرجوع للخلف',
     'service-deatils' => ' تفاصيل الخدمه',
-    'save-service' => 'حفظ',
+    'save' => 'حفظ',
     'update-service' => 'تحديث الخدمه',
     'update-status' => 'تم التحديث بنجاح',
     'delete-status' => 'تم الحذف بنجاح',
     'add-status' => 'تم الاضافه بنجاح',
     'are-sure' => 'هل انت متاكد',
+
+
+    // feature module
+    'features' => 'الميزات',
+    'no-features-available' => 'لا يوجد ميزات متاحه',
+    'back-to-features' => 'للرجوع للميزات',
+    'service-deatils' => ' تفاصيل الميزه',
 ];

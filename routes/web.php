@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FeatureController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\Route;
@@ -37,6 +38,10 @@ Route::prefix(LaravelLocalization::setLocale() . '/dashboard')->middleware(['loc
         // ===============================> Services
         Route::controller(ServiceController::class)->group(function () {
             Route::resource('services', ServiceController::class);
+        });
+        // ===============================> Services
+        Route::controller(FeatureController::class)->group(function () {
+            Route::resource('features', FeatureController::class);
         });
     });
     require __DIR__.'/auth.php';

@@ -24,5 +24,6 @@
             <span>{{ __('messages.components') }}</span>
         </p>
         <x-tab-bar-button :link="route('dashboard.services.index')" icon="fe-layers">{{ __('messages.services') }}</x-tab-bar-button>
+        <x-tab-bar-button :link="route('dashboard.features.index')" icon="fe-bookmark">{{ __('messages.features') }}</x-tab-bar-button>
     </nav>
 </aside>
