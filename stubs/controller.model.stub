@@ -8,12 +8,14 @@ use {{ namespacedRequests }}
 
 class {{ class }} extends Controller
 {
+    private const DIRECT = 'dashboard-theme.{{ modelVariable }}s.';
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        ${{ modelVariable }}s = {{ model }}::paginate(config('paginate.paginate_number'));
+        return view(self::DIRECT . 'index', get_defined_vars());
     }
 
     /**
@@ -21,7 +23,7 @@ class {{ class }} extends Controller
      */
     public function create()
     {
-        //
+        return view(self::DIRECT . 'create');
     }
 
     /**
@@ -29,7 +31,8 @@ class {{ class }} extends Controller
      */
     public function store({{ storeRequest }} $request)
     {
-        //
+        {{ model }}::create($request->validated());
+        return back()->with('success', __('messages.add-status'));
     }
 
     /**
@@ -37,7 +40,7 @@ class {{ class }} extends Controller
      */
     public function show({{ model }} ${{ modelVariable }})
     {
-        //
+        return view(self::DIRECT . 'show', get_defined_vars());
     }
 
     /**
@@ -45,7 +48,7 @@ class {{ class }} extends Controller
      */
     public function edit({{ model }} ${{ modelVariable }})
     {
-        //
+        return view(self::DIRECT . 'edit', get_defined_vars());
     }
 
     /**
@@ -53,7 +56,8 @@ class {{ class }} extends Controller
      */
     public function update({{ updateRequest }} $request, {{ model }} ${{ modelVariable }})
     {
-        //
+        ${{ modelVariable }}->update($request->validated());
+        return to_route('dashboard.services.index')->with('success', __('messages.update-status'));
     }
 
     /**
@@ -61,6 +65,7 @@ class {{ class }} extends Controller
      */
     public function destroy({{ model }} ${{ modelVariable }})
     {
-        //
+        ${{ modelVariable }}->delete();
+        return back()->with('success', __('messages.delete-status'));
     }
 }

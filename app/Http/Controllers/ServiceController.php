@@ -8,13 +8,14 @@ use App\Models\Service;
 
 class ServiceController extends Controller
 {
+    private const DIRECT = 'dashboard-theme.services.';
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $services = Service::paginate(8);
-        return view('dashboard-theme.services.index', get_defined_vars());
+        $services = Service::paginate(config('paginate.paginate_number'));
+        return view(self::DIRECT . 'index', get_defined_vars());
     }
 
     /**
@@ -22,7 +23,7 @@ class ServiceController extends Controller
      */
     public function create()
     {
-        return view('dashboard-theme.services.create');
+        return view(self::DIRECT . 'create');
     }
 
     /**
@@ -31,7 +32,7 @@ class ServiceController extends Controller
     public function store(StoreServiceRequest $request)
     {
         Service::create($request->validated());
-        return back()->with('create-service-status', __('messages.add-status'));
+        return back()->with('success', __('messages.add-status'));
     }
 
     /**
@@ -39,7 +40,7 @@ class ServiceController extends Controller
      */
     public function show(Service $service)
     {
-        return view('dashboard-theme.services.show', get_defined_vars());
+        return view(self::DIRECT . 'show', get_defined_vars());
     }
 
     /**
@@ -47,7 +48,7 @@ class ServiceController extends Controller
      */
     public function edit(Service $service)
     {
-        return view('dashboard-theme.services.edit', compact('service'));
+        return view(self::DIRECT . 'edit', compact('service'));
     }
 
     /**
@@ -56,7 +57,7 @@ class ServiceController extends Controller
     public function update(UpdateServiceRequest $request, Service $service)
     {
         $service->update($request->validated());
-        return to_route('dashboard.services.index')->with('update-service-status', __('messages.update-status'));
+        return to_route('dashboard.services.index')->with('success', __('messages.update-status'));
     }
 
     /**
@@ -65,7 +66,7 @@ class ServiceController extends Controller
     public function destroy(Service $service)
     {
         $service->delete();
-        return back()->with('delete-service-status', __('messages.delete-status'));
+        return back()->with('success', __('messages.delete-status'));
 
     }
 }
