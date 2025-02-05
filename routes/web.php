@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
@@ -15,7 +16,9 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 |
 */
 
-// test theme
+/**
+ * FRONT ROUTES
+ */
 Route::name('front.')->group(function () {
     Route::view('/', 'front-theme.index')->name('index');
     Route::view('/about', 'front-theme.about')->name('about');
@@ -23,10 +26,18 @@ Route::name('front.')->group(function () {
     Route::view('/contact', 'front-theme.contact')->name('contact');
 });
 
-// test theme
+/**
+ * DASHBOARD ROUTES
+ */
 Route::prefix(LaravelLocalization::setLocale() . '/dashboard')->middleware(['localeSessionRedirect', 'localizationRedirect', 'localeViewPath'])->name('dashboard.')->group(function () {
     Route::middleware('auth')->group(function () {
+        // ===============================> Home Page
         Route::view('/', 'dashboard-theme.index')->name('index')->middleware('auth');
+
+        // ===============================> Services
+        Route::controller(ServiceController::class)->group(function () {
+            Route::resource('services', ServiceController::class);
+        });
     });
     require __DIR__.'/auth.php';
 });

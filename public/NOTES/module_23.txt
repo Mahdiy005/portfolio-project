@@ -1,0 +1,8 @@
+*** You can use resource for any model even you don't create the controller of type resource,
+resource is just way to define routes of CRUD operation
+
+
+*** in the method of controller fi you have more that variable 7 vars , and you need to pass them without using
+compact('data1', 'data2', 'data3', 'data4', 'data5', 'data6')    -> not practical
+rather we use `get_defined_vars()` method
+
