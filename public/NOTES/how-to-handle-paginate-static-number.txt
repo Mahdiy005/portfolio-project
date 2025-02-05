@@ -1,0 +1,11 @@
+*** if you need to share specific variable ?
+    - you need to put it in any configuration files , specific in `config/`
+    - you can create your own php file such `config/paginate.php`
+    - within this file return array with key and value such that
+        <?php
+            return [
+                'share' => 'variable'
+            ];
+    - to access this variable you can use this function `config('fileNameWithinConfig', 'keyThatReturnInThisFile'')
+     such that -> config('paginate.share')
+

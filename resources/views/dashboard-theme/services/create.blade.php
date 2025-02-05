@@ -7,7 +7,7 @@
             <a href="{{ route('dashboard.services.index') }}"
                 class="btn btn-secondary">{{ __('messages.back-to-services') }}</a>
         </div>
-        <x-status state="create-service-status" />
+        <x-status />
 
         <div class="card">
             <div class="card-header">{{ __('messages.service-deatils') }}</div>
@@ -15,27 +15,21 @@
                 <form action="{{ route('dashboard.services.store') }}" method="POST">
                     @csrf
                     <div class="form-group">
-                        <label for="title">{{ __('messages.title') }}</label>
-                        <input type="text" class="form-control" id="title" name="title" >
-                        @error('title')
-                            <div style="color: red">{{ $message }}</div>
-                        @enderror
+                        <x-label-form for="title">{{ __('messages.title') }}</x-label-form>
+                        <x-input-form type="text" id="title" name="title" />
+                        <x-error-form name="title" />
                     </div>
                     <div class="form-group">
-                        <label for="description">{{ __('messages.description') }}</label>
-                        <textarea class="form-control" id="description" name="description" rows="3" ></textarea>
-                        @error('description')
-                            <div style="color: red">{{ $message }}</div>
-                        @enderror
+                        <x-label-form for="description">{{ __('messages.description') }}</x-label-form>
+                        <x-form-area id="description" name="description" />
+                        <x-error-form name="description" />
                     </div>
                     <div class="form-group">
-                        <label for="icon">{{ __('messages.icon') }}</label>
-                        <input type="text" class="form-control" id="icon" name="icon" >
-                        @error('icon')
-                            <div style="color: red">{{ $message }}</div>
-                        @enderror
+                        <x-label-form for="icon">{{ __('messages.icon') }}</x-label-form>
+                        <x-input-form type="text" id="icon" name="icon" />
+                        <x-error-form name="icon" />
                     </div>
-                    <button type="submit" class="btn btn-success">{{ __('messages.save-service') }}</button>
+                    <x-submit-form>{{ __('messages.save-service') }}</x-submit-form>
                 </form>
             </div>
         </div>
