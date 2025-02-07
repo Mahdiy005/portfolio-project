@@ -1,8 +1,12 @@
 <?php
 
 use App\Http\Controllers\FeatureController;
+use App\Http\Controllers\MessageController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\SubscriberController;
+use App\Http\Controllers\TestimonialController;
+use App\Models\Subscriber;
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
@@ -25,6 +29,8 @@ Route::name('front.')->group(function () {
     Route::view('/about', 'front-theme.about')->name('about');
     Route::view('/service', 'front-theme.services')->name('service');
     Route::view('/contact', 'front-theme.contact')->name('contact');
+    Route::post('contact/store', [MessageController::class, 'store'])->name('contact.store');
+    Route::post('subscriber/store', [SubscriberController::class, 'store'])->name('subscriber.store');
 });
 
 /**
@@ -35,7 +41,7 @@ Route::prefix(LaravelLocalization::setLocale() . '/dashboard')->middleware(['loc
         // ===============================> Home Page
         Route::view('/', 'dashboard-theme.index')->name('index')->middleware('auth');
 
-        // ===============================> Services
+        // ===============================> Servicesp
         Route::controller(ServiceController::class)->group(function () {
             Route::resource('services', ServiceController::class);
         });
@@ -43,19 +49,21 @@ Route::prefix(LaravelLocalization::setLocale() . '/dashboard')->middleware(['loc
         Route::controller(FeatureController::class)->group(function () {
             Route::resource('features', FeatureController::class);
         });
+
+        // ===============================> Messages
+        Route::controller(MessageController::class)->group(function () {
+            Route::resource('messages', MessageController::class)->only(['index', 'destroy']);
+        });
+
+        // ===============================> Subscribers
+        Route::controller(SubscriberController::class)->group(function () {
+            Route::resource('subscribers', SubscriberController::class)->only(['index', 'destroy']);
+        });
+
+        // ===============================> Testimonial
+        Route::controller(TestimonialController::class)->group(function () {
+            Route::resource('testimonials', TestimonialController::class);
+        });
     });
     require __DIR__.'/auth.php';
 });
-// Route::get('/', function () {
-//     return view('front-theme.about');
-// });
-
-// Route::get('/dashboard', function () {
-//     return view('dashboard');
-// })->middleware(['auth', 'verified'])->name('dashboard');
-
-// Route::middleware('auth')->group(function () {
-//     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-//     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-//     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-// });

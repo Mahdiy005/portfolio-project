@@ -1,4 +1,4 @@
-<div class="alert alert-info text-center">{{ $slot }}</div>
+<div class="text-center w-100 alert alert-info">{{ $slot }}</div>
 
 
 
