@@ -28,5 +28,6 @@
         <x-tab-bar-button :link="route('dashboard.messages.index')" icon="fe-file-text">{{ __('messages.messages') }}</x-tab-bar-button>
         <x-tab-bar-button :link="route('dashboard.subscribers.index')" icon="fe-share-2">{{ __('messages.subscribers') }}</x-tab-bar-button>
         <x-tab-bar-button :link="route('dashboard.testimonials.index')" icon="fe-list">{{ __('messages.testimonials') }}</x-tab-bar-button>
+        <x-tab-bar-button :link="route('dashboard.settings.index')" icon="fe-settings">{{ __('messages.settings') }}</x-tab-bar-button>
     </nav>
 </aside>

@@ -62,4 +62,8 @@ return [
     'image' => 'Image',
     'back-to-testimonials' => 'Back to testimonials',
     'add-new-testimonial' => 'Add new testimonial',
+
+    // settings
+    'settings' => 'Settings',
+    'edit-ettings' => 'Edit Application Settings',
 ];
