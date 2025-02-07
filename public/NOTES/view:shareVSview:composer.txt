@@ -1,0 +1,16 @@
+*** when you use `View::share('setting', Setting::first()) ` this line execute during bootstrapping phase
+that will befor the DB connection, so any query to DB will return null
+
+The issue with your code is that the View::share('settings', Setting::all()); line is executed during the
+bootstrapping phase of the application, which happens before the database connection is fully established.
+ This can lead to the Setting::all() query being executed before the database is ready, resulting in no
+ data being shared with the views.
+
+To fix this, you should defer the execution of the Setting::all() query until the view is actually being
+rendered. One way to achieve this is by using a view composer. View composers allow you to define logic
+that runs whenever a specific view is rendered, ensuring that the database is ready when the query is
+executed.
+        // Use a view composer to share settings with all views
+        View::composer('*', function ($view) {
+            $view->with('settings', Setting::all());
+        });

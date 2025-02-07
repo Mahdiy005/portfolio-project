@@ -4,6 +4,7 @@ use App\Http\Controllers\FeatureController;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\SettingController;
 use App\Http\Controllers\SubscriberController;
 use App\Http\Controllers\TestimonialController;
 use App\Models\Subscriber;
@@ -63,6 +64,11 @@ Route::prefix(LaravelLocalization::setLocale() . '/dashboard')->middleware(['loc
         // ===============================> Testimonial
         Route::controller(TestimonialController::class)->group(function () {
             Route::resource('testimonials', TestimonialController::class);
+        });
+
+        // ===============================> Setting
+        Route::controller(SettingController::class)->group(function () {
+            Route::resource('settings', SettingController::class)->only(['index', 'edit', 'update']);
         });
     });
     require __DIR__.'/auth.php';
