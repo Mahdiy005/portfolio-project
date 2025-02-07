@@ -39,4 +39,27 @@ return [
     'back-to-features' => 'Back to Features',
     'feature-deatils' => 'Feature Details',
 
+
+    // messages
+    'messages' => 'Messages',
+    'no-messages-available' => 'No Messages Available',
+    'name' => 'Name',
+    'email' => 'Email',
+    'subject' => 'Subject',
+    'message' => 'Message',
+
+    // messages
+    'subscribers' => 'Subscribers',
+    'no-subscriber-available' => 'No Subscriber Available',
+
+
+    // testimonials
+    'testimonials' => 'Testimonials',
+    'no-testimonials-available' => 'No Testimonials Available',
+    'name' => 'Name',
+    'position' => 'Position',
+    'description' => 'Description',
+    'image' => 'Image',
+    'back-to-testimonials' => 'Back to testimonials',
+    'add-new-testimonial' => 'Add new testimonial',
 ];
